@@ -309,20 +309,13 @@ body {
         </div>
     </section>
 	
-<!-- Our Partners Section -->
-<section id="partners" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center mb-4">Our Banking & Finance Partners</h2>
-        <p class="text-center mb-5">
-            We proudly collaborate with leading banks and financial institutions to provide the best loan and insurance solutions.
-        </p>
-
-    <div class="row text-center">
-<!-- Partner Slider Section -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Bootstrap -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partners Slider</title>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
@@ -330,28 +323,25 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Navbar */
-.navbar {
-    background-color: #003366;
-}
-.navbar-brand {
-    color: white !important;
-    font-weight: bold;
+/* Section */
+#partners {
+    background: #f8f9fa;
 }
 
-/* Partner Slider */
+/* Slider */
 .slider {
     overflow: hidden;
-    position: relative;
     width: 100%;
 }
 
+/* Track */
 .slide-track {
     display: flex;
     width: calc(200px * 8);
     animation: scroll 20s linear infinite;
 }
 
+/* Images */
 .slide-track img {
     width: 180px;
     height: 80px;
@@ -361,23 +351,41 @@ body {
 
 /* Animation */
 @keyframes scroll {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Hover pause */
+.slide-track:hover {
+    animation-play-state: paused;
 }
 </style>
 </head>
 
 <body>
 
+<!-- Our Partners Section -->
+<section id="partners" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Banking & Finance Partners</h2>
+        <p class="text-center mb-5">
+            We proudly collaborate with leading banks and financial institutions.
+        </p>
 
+        <div class="slider">
+            <div class="slide-track">
 
                 <!-- Logos -->
                 <img src="sbi.png" alt="SBI">
                 <img src="piral.png" alt="Piramal">
-                <img src="tata.png" alt="Tata Capital">
+                <img src="tata.png" alt="Tata">
                 <img src="idfc.JPG" alt="IDFC">
 
-                <!-- Duplicate for smooth loop -->
+                <!-- Duplicate (smooth loop) -->
                 <img src="sbi.png">
                 <img src="piral.png">
                 <img src="tata.png">
@@ -385,6 +393,7 @@ body {
 
             </div>
         </div>
+
     </div>
 </section>
 
